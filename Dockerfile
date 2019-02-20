@@ -13,4 +13,4 @@ LABEL "com.github.actions.color"="black"
 
 COPY entrypoint.js entrypoint.js
 
-ENTRYPOINT ["./entrypoint.js"]
+ENTRYPOINT ["node", "entrypoint.js"]
