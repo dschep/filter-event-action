@@ -8,12 +8,12 @@ An example workflow to block deleted branches:
 
 
 ```
-workflow "Deploy" {
+workflow "Remove" {
   on = "push"
-  resolves = ["non deleted branches only"]
+  resolves = ["on deleted branches only"]
 }
 
-action "non deleted branches only" {
+action "on deleted branches only" {
   uses = "dschep/filter-event-action@master"
   args = "event.deleted"
 }
